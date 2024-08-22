@@ -1,0 +1,61 @@
+﻿@*@model Category
+
+<form method="post" asp-action="Delete">
+    <input asp-for="ID" hidden />
+    <div class="border pt-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Delete Category</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3 row">
+            <label asp-for="Name" class="p-2"></label>
+            <input asp-for="Name" disabled style="width:690px" class="form-control" />
+        </div>
+        <div class="mb-3 row">
+            <label asp-for="DisplayOrder" class="p-2"></label>
+            <input asp-for="DisplayOrder" disabled style="width:690px" class="form-control" />
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-danger form-control">Delete</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Category" asp-action="Index" class="btn btn-secondary border">Back to List</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+*@
+@model Category
+<form method="post" asp-action="Delete">
+    <input asp-for="ID" hidden />
+    <div class="border rounded p-3 mt-4 bg-light">
+        <div class="mb-3">
+            <h2 class="text-danger h5">Delete Category</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All" class="text-danger mb-2"></div>
+        <div class="mb-2 row">
+            <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="Name" disabled class="form-control form-control-sm" />
+            </div>
+        </div>
+        <div class="mb-2 row">
+            <label asp-for="DisplayOrder" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="DisplayOrder" disabled class="form-control form-control-sm" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-2 mb-2">
+                <button type="submit" class="btn btn-danger btn-sm w-100">Delete</button>
+            </div>
+            <div class="col-6 col-md-2 mb-2">
+                <a asp-controller="Category" asp-action="Index" class="btn btn-secondary btn-sm w-100">Back</a>
+            </div>
+        </div>
+    </div>
+</form>
